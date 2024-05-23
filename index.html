@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body>
+        <h1 id="texto">Aplicación para manejar archivos CSV</h1>
+        <nav>
+            <button id="boton" onclick="showSection('read')">Leer CSV</button>
+            <button id="boton" onclick="showSection('insert')">Insertar Datos</button>
+            <button id="boton" onclick="showSection('delete')">Borrar Datos</button>
+        </nav>
+    
+        <section id="read" class="section">
+            <h2 id="texto">Leer archivo CSV</h2>
+            <input type="file" id="csvFileInput" accept=".csv" />
+            <button id="boton" onclick="readCSV()">Leer Archivo</button>
+            <pre id="csvContent"></pre>
+        </section>
+    
+        <section id="insert" class="section" style="display: none;">
+            <h2>Insertar Datos en CSV</h2>
+            <textarea id="newRow" placeholder="Ingresa los datos de la nueva fila separados por comas"></textarea>
+            <button id="boton" onclick="insertRow()">Insertar</button>
+            <pre id="insertResult"></pre>
+        </section>
+    
+        <section id="delete" class="section" style="display: none;">
+            <h2>Borrar Datos del CSV</h2>
+            <textarea id="deleteRow" placeholder="Ingresa el contenido exacto de la fila a borrar"></textarea>
+            <button id="boton"  onclick="deleteRow()">Borrar</button>
+            <pre id="deleteResult"></pre>
+        </section>
+    
+        <script src="app.js"></script>
+</body>
+</html>
